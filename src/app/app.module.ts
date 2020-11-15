@@ -1,16 +1,29 @@
+import { ShowWaveViewComponent } from './show-wave-view/show-wave-view.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ShowWaveViewModule } from './show-wave-view/show-wave-view.module';
+
+import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowWaveViewComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRouting, // 路由配置
+    ShowWaveViewModule, // 展示波形图
   ],
   providers: [],
   bootstrap: [AppComponent]
